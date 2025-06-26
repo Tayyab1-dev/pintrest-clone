@@ -5,7 +5,8 @@ function Main({ search }) {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = 'umOJ8nLav0lQtlNTCPZQABT8ZvxrjM1Q1anvhgaEAl46XqBBgwvyZsCG';
+  // ✅ Use API key from .env file
+  const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
 
   const fetchImages = async (reset = false) => {
     try {
